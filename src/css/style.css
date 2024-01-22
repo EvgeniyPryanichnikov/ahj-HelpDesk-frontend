@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  text-align: center;
+  padding: 25px;
+}
+
+.container {
+  background-color: #ddddd6;
+  border: 1px solid #402525;
+  border-radius: 0.75rem;
+  padding: 3rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.input {
+  display: inline-block;
+  padding: 0.55rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgb(94, 85, 85);
+  border: 1px solid rgb(170, 161, 161);
+  border-radius: 0.25rem;
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid rgb(226, 77, 77);
+}
+
+.input::placeholder {
+  color: rgb(190, 196, 196);
+}
+
+.btn {
+  display: inline-block;
+  min-width: 6rem;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.15rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+  background-color: #b3acae;
+  border: 1px solid rgb(150, 144, 144);
+  border-radius: 0.25rem;
+  user-select: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border-color: rgb(4, 102, 4);
+  color: rgb(4, 102, 4);
+}
+
+.btn-add:hover {
+  border-color: rgb(179, 0, 0);
+  color: rgb(179, 0, 0);
+}
+
+.add {
+  border: 1px solid black;
+  background-color: #fbfbfb;
+  padding: 1rem;
+  border-radius: 1.1rem;
+}
+/* for form */
+.ticket-form-container {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+}
+
+form {
+  position: relative;
+}
+
+.form-control {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.error {
+  background-color: #f5f2f2;
+  border: 2px solid #fa0a0a;
+}
+
+/* for table */
+.table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+thead th {
+  padding: 5px;
+}
+
+.tickets {
+  font-size: 1.2rem;
+  height: 4rem;
+}
+
+tbody {
+  display: block;
+  min-height: 40vh;
+  width: 100%;
+  background-color: #ddddd6;
+  font-weight: 400;
+  color: #4d4949;
+}
+
+.ticket-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px;
+  min-width: 500px;
+  background-color: rgb(220, 228, 228);
+  border-bottom: 1px solid black;
+}
+
+.ticket-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ticket-description {
+  display: none;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.update {
+  margin-right: 5px;
+}
+
+.update,
+.delete {
+  border: 1px solid black;
+  border-radius: 50%;
+  padding: 0.25rem;
+}
+
+.update:hover,
+.delete:hover,
+.done:hover {
+  cursor: pointer;
+  color: #b30b0b;
+  border-color: #b30b0b;
+}
+
+.ticket-name {
+  position: relative;
+  display: block;
+  text-align: left;
+}
+
+.done {
+  display: flex;
+  align-self: flex-start;
+  padding: 5px;
+  font-size: 1.25rem;
+  font-weight: 900;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.ticket-btn {
+  margin-top: 0.5rem;
+}
+
+.delete-message {
+  display: none;
+  position: absolute;
+  left: 50%;
+  z-index: 999;
+  border: 1px solid #df0c0c;
+  padding: 10px;
+  background-color: #ebe5e5;
+  transform: translate(-50%, -50%);
+  top: 25%;
+}
+
+.ticket-form-container_visible,
+.delete-message_visible,
+.ticket-description_visible {
+  display: block;
+}
+
+#ticket-form {
+  min-width: 380px;
+  border: 1px solid #696363;
+  padding: 10px;
+  background-color: #dddada;
+}
+
+.form-ticket {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+.ticket-form-error {
+  z-index: 10000;
+}
+
+.label-ticket {
+  text-align: left;
+  font-size: 1.15rem;
+  margin: 0.5rem 0;
+}
+
+.input-ticket {
+  border-radius: 1.25rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-add {
+  background-color: #e4e1e1;
+  color: #363232;
+  border-radius: 25px;
+}
+
+.btn-close {
+  border-radius: 25px;
+}
+
+@media (min-width: 769px) {
+  .container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .table {
+    margin: auto;
+  }
+}
