@@ -1,9 +1,7 @@
 import createRequest from './api/createRequest';
 
-
 //  Класс для связи с сервером.
 //  Содержит методы для отправки запросов на сервер и получения ответов
-
 export default class TicketService {
   constructor(url) {
     this.url = url;
