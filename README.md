@@ -1,8 +1,6 @@
 ### HelpDesk: Frontend
 
 [![Build status](https://ci.appveyor.com/api/projects/status/1vud0irdgu2mkmed?svg=true)](https://ci.appveyor.com/project/EvgeniyPryanichnikov/ahj-helpdesk-frontend)
-
-// 
 #### Легенда
 
 #### Описание
