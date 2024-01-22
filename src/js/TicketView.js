@@ -1,9 +1,7 @@
 import Ticket from './Ticket';
 
-
 // Класс для отображения тикетов на странице.
 // Он содержит методы для генерации разметки тикета.
-
 export default class TicketView {
   constructor(container, updateCallback, showFormCallback) {
     this.container = container;
